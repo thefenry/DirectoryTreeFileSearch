@@ -70,8 +70,11 @@
 
 # cpan 
 
+print "Content-type: text/html\n\n";
 
  use File::Find;
+
+ @fileLocations;
 
  # find sub { print "$File::Find::name\n"}, "testdirectory";
 
@@ -79,10 +82,10 @@ find (
 {
 	wanted => \&findfiles,
 
-	}, 'testdirectory'
+	}, 'C:\Users\thefenry\Desktop\testdirectory' #this is the location of the directory root
 	);
 
 sub findfiles{
-	# print "$File::Find::name\n" if /test1.cs$/;
+	print "$File::Find::name\n" if /test1.cs$/;
 }
  exit;
