@@ -15,5 +15,4 @@ sub findfiles{
 
 # print "Size: ", scalar @fileLocations, "\n"; #This prints the size just to make sure that it 
 																							#is as expected when developing
-
- exit;
+exit;
