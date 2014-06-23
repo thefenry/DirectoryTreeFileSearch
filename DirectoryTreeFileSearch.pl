@@ -86,6 +86,9 @@ find (
 	);
 
 sub findfiles{
-	print "$File::Find::name\n" if /test1.cs$/;
+	push(@fileLocations, $File::Find::name) if /test1.cs$/;
 }
+
+print "Size: ", scalar @fileLocations, "\n";
+
  exit;
